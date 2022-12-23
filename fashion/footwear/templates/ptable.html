@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>product table</title>
+  <style>
+    table,th,td{
+    border:1px solid;
+    }
+    img{
+    height:10%;
+    width:10%;
+    }
+
+  </style>
+</head>
+<body>
+<h1>SHOES FOR MEN</h1>
+<table>
+  <tr>
+    <th>pname</th>
+    <th>model</th>
+    <th>image</th>
+    <th>price</th>
+  </tr>
+  {% for i in pr %}
+  <tr>
+    <td>{{ i.pname }}</td>
+    <td>{{ i.model }}</td>
+    <td><img src="{{ i.image.url }}"></td>
+    <td>{{ i.price }}</td>
+    <td><a href="delete/{{ i.id }}">delete</a> </td>
+  </tr>
+  {% endfor %}
+</table>
+
+</body>
+</html>

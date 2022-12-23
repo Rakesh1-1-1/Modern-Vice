@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>product page</title>
+</head>
+<body>
+<form action="pro" method="post" enctype="multipart/form-data">
+    <label>pname</label>
+    <input type="text" name="pname"><br>
+    <label>model</label>
+    <input type="number" name="model"><br>
+    <label>image</label>
+    <input type="file" name="image"><br>
+    <label>price</label>
+    <input type="number" name="price"><br>
+    <input type="submit" value="send">
+    {% csrf_token %}
+</form>
+
+</body>
+</html>

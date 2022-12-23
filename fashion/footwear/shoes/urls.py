@@ -1,0 +1,35 @@
+from django.contrib import admin
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.index, name="index"),
+    path('index', views.index, name="index"),
+    path('register', views.register, name="register"),
+    path('action', views.action, name="action"),
+    path('regview', views.regview, name="regview"),
+    path('display', views.display, name="dispaly"),
+    path('check', views.check, name="check"),
+    path('login', views.login, name="login"),
+    path('adm', views.adm, name="adm"),
+    path('user', views.user, name="user"),
+    path('userview', views.userview, name="userview"),
+    path('pro', views.pro, name="pro"),
+    path('product', views.product, name="product"),
+    path('ptable', views.ptable, name="ptable"),
+    path('proview', views.proview, name="proview"),
+    path('delete/<int:id>', views.delete, name="delete"),
+    path('buy', views.buy, name="buy"),
+    path('show', views.show, name="show"),
+    path('btable', views.btable, name="btable"),
+    path('pf',views.pf,name="pf"),
+    path('profile',views.profile,name="profile"),
+    path('ord',views.ord,name="ord"),
+    path('ortable',views.ortable,name="ortable"),
+    path('logout',views.logout,name="logout"),
+    path('shoes',views.shoes,name="shoes"),
+    path('racingboots',views.racingboots,name="racingboots"),
+    path('collection',views.collection,name="collection"),
+    path('con',views.con,name="con"),
+    path('contact',views.contact,name="contact"),
+]

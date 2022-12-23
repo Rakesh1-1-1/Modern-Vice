@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>buy table</title>
+</head>
+<body>
+<table>
+  <tr>
+    <th>username</th>
+    <th>pname</th>
+    <th>price</th>
+    <th>date</th>
+  </tr>
+  {% for i in bt %}
+  <tr>
+    <td>{{i.username.username }}</td>
+    <td>{{i.pname.pname }}</td>
+    <td>{{ i.pname.price }}</td>
+    <td>{{i.date }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+</body>
+</html>

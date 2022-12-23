@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>user details page</title>
+  <style>
+    table,th,td{
+    border:1px solid;
+    }
+    img{
+    height:10%;
+    width:10%;
+    }
+  </style>
+</head>
+<body>
+<table>
+  <tr>
+    <th>name</th>
+    <th>age</th>
+    <th>image</th>
+    <th>address</th>
+    <th>email</th>
+    <th>phone</th>
+    <th>username</th>
+  </tr>
+  {% for i in re %}
+  <tr>
+    <td>{{ i.name }}</td>
+    <td>{{ i.age }}</td>
+    <td><img src="{{ i.image.url }}"></td>
+    <td>{{ i.address }}</td>
+    <td>{{ i.email }}</td>
+    <td>{{ i.phone }}</td>
+    <td>{{ i.username }}</td>
+  </tr>
+  {% endfor %}
+</table>
+<table>
+  <tr>
+    <th>username</th>
+    <th>password</th>
+  </tr>
+  {% for i in lo %}
+  <tr>
+    <td>{{ i.username }}</td>
+    <td>{{i.password }}</td>
+  </tr>
+  {% endfor %}
+</table>
+<a href="home">BACK TO HOME</a>
+</body>
+</html>
